@@ -1,0 +1,25 @@
+{
+  "name": "basic-admin-angular",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app/app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alexdvance/basic-admin-angular.git"
+  },
+  "author": "Alex Vance",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alexdvance/basic-admin-angular/issues"
+  },
+  "homepage": "https://github.com/alexdvance/basic-admin-angular#readme",
+  "devDependencies": {
+    "angular": "^1.5.9",
+    "bootstrap-sass": "^3.3.7",
+    "gulp": "^3.9.1",
+    "gulp-sass": "^2.3.2"
+  }
+}

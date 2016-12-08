@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html ng-app="basicAdmin">
+    <head>
+        <base href="/">
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, maximum-scale = 1.0">
+        <meta name="fragment" content="!" />
+
+        <title ng-bind="'SiteName - ' + pageTitle"></title>
+        <meta name="description" content="{{pageDescription}}">
+
+        <link href="styles/app.css" rel="stylesheet">
+    </head>
+
+    <body ng-class="bodyClasses" ng-controller="MainCtrl">
+
+        <div class="page">
+
+            <section class="main">
+                <div ui-view autoscroll="false" id="ui-view"></div>
+            </section>
+
+        </div>
+
+        <script src="vendor/angular/angular.js"></script>
+        <script src="app.js"></script>
+        <script src="views/MainController.js"></script>
+
+    </body>
+
+</html>
