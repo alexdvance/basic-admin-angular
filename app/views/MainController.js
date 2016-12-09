@@ -8,10 +8,12 @@ angular.module('basicAdmin')
   function($scope, DataService){
     DataService.getData().then(function(response) {
       DataService.setDataItems(response.data);
+      DataService.setActiveItem(response.data[0]);
 
       console.log('items', DataService.getDataItems())
+      $scope.items = DataService.getDataItems();
+      $scope.activeItem = DataService.getActiveItem();
     });
-    $scope.test = null;
 
     console.log('Up and running!');
 }])

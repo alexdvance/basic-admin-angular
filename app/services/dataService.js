@@ -15,12 +15,23 @@ angular.module('basicAdmin')
         return dataItems;
     }
 
+    function setActiveItem(item) {
+        activeItem = item;
+    }
+
+    function getActiveItem() {
+        return activeItem;
+    }
+
     var dataItems = [];
+    var activeItem = {};
 
     return {
         getData: getData,
         setDataItems: setDataItems,
         getDataItems: getDataItems,
+        setActiveItem: setActiveItem,
+        getActiveItem: getActiveItem,
     };
 }])
 

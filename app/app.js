@@ -1,2 +1,5 @@
-angular.module('basicAdmin', [])
+angular.module('basicAdmin', [
+  'ba.navigator',
+  'ba.infoPanel',
+])
 
