@@ -1,3 +1,9 @@
-<div ng-repeat="item in $ctrl.items">
+<div>General Info</div>
+<div ng-repeat="item in $ctrl.items | filter: $ctrl.singleProp">
+  {{ item.name }}
+</div>
+
+<div>Complicated shit</div>
+<div ng-repeat="item in $ctrl.items | filter: $ctrl.multiProp">
   {{ item.name }}
 </div>
