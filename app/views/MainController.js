@@ -4,15 +4,15 @@ angular.module('basicAdmin')
 
 .controller('MainCtrl', [
   '$scope',
-  'DataService',
-  function($scope, DataService){
-    DataService.getData().then(function(response) {
-      DataService.setDataItems(response.data);
-      DataService.setActiveItem(response.data[0]);
+  'DataAPI',
+  function($scope, DataAPI){
+    DataAPI.getData().then(function(response) {
+      DataAPI.setDataItems(response.data);
+      DataAPI.setActiveItem(response.data[0]);
 
-      console.log('items', DataService.getDataItems())
-      $scope.items = DataService.getDataItems();
-      $scope.activeItem = DataService.getActiveItem();
+      console.log('items', DataAPI.getDataItems())
+      $scope.items = DataAPI.getDataItems();
+      $scope.activeItem = DataAPI.getActiveItem();
     });
 
     console.log('Up and running!');

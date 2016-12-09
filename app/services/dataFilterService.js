@@ -2,7 +2,7 @@
 
 angular.module('basicAdmin')
 
-.service('dataFilterService', [function(){
+.service('DataFilters', [function(){
     function singleProp(object) {
         return !object.hasOwnProperty('containing_object');
     }

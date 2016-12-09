@@ -1,8 +1,8 @@
 'use strict';
 
-function NavigatorCtrl(dataFilterService) {
-  this.singleProp = dataFilterService.singleProp;
-  this.multiProp = dataFilterService.multiProp;
+function NavigatorCtrl(DataFilters) {
+  this.singleProp = DataFilters.singleProp;
+  this.multiProp = DataFilters.multiProp;
 }
 
 angular.module('ba.navigator', [])

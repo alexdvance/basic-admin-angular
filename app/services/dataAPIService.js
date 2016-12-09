@@ -2,7 +2,7 @@
 
 angular.module('basicAdmin')
 
-.service('DataService', ['$http', function($http){
+.service('DataAPI', ['$http', function($http){
     function getData() {
         return $http.get('/data/schema.json');
     }

@@ -16,9 +16,11 @@
 
         <div class="page">
 
-            <section class="main">
-                <navigator items="items"></navigator>
-                <info-panel info="activeItem"></info-panel>
+            <section class="main row">
+                <navigator items="items"
+                    class="coll col-sm-3"></navigator>
+                <info-panel info="activeItem"
+                    class="coll col-sm-9"></info-panel>
                 <div ui-view autoscroll="false" id="ui-view"></div>
             </section>
 
@@ -26,7 +28,7 @@
 
         <script src="vendor/angular/angular.js"></script>
         <script src="app.js"></script>
-        <script src="services/dataService.js"></script>
+        <script src="services/dataAPIService.js"></script>
         <script src="services/dataFilterService.js"></script>
         <script src="views/MainController.js"></script>
         <script src="components/navigator/navigator.js"></script>
