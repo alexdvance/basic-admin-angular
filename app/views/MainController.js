@@ -4,15 +4,16 @@ angular.module('basicAdmin')
 
 .controller('MainCtrl', [
   '$scope',
+  'DataModel',
   'DataAPI',
-  function($scope, DataAPI){
+  function($scope, DataModel, DataAPI){
     DataAPI.getData().then(function(response) {
-      DataAPI.setDataItems(response.data);
-      DataAPI.setActiveItem(response.data[0]);
+      DataModel.setDataItems(response.data);
+      DataModel.setActiveItem(response.data[0]);
 
-      console.log('items', DataAPI.getDataItems())
-      $scope.items = DataAPI.getDataItems();
-      $scope.activeItem = DataAPI.getActiveItem();
+      console.log('items', DataModel.getDataItems())
+      $scope.items = DataModel.getDataItems();
+      $scope.activeItem = DataModel.getActiveItem();
     });
 
     console.log('Up and running!');
