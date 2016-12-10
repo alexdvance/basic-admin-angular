@@ -1,5 +1,86 @@
+@import 'vendor/bootstrap-sprockets';
 @import 'vendor/bootstrap';
+
+.page {
+  padding-left: 15px;
+  padding-right: 15px;
+}
 
 .main {
   display: flex;
+}
+
+.navigator {
+  padding-top: 60px;
+  padding-bottom: 15px;
+  background-color: #e1e1e1;
+}
+
+.navigator--header {
+  padding: 10px;
+  color: white;
+  font-size: 12px;
+  text-transform: uppercase;
+  background-color: teal;
+}
+
+.info-panel {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  background-color: #eeeeee;
+}
+
+.info-panel--header {
+  color: teal;
+  font-size: 18px;
+}
+
+.info-panel--container {
+  padding: 10px;
+  margin-top: 20px;
+  background-color: white;
+}
+
+.info-panel--field-name {
+}
+
+.info-panel--table {
+  width: 100%;
+  margin-top: 15px;
+}
+
+.field-groups {
+  border: 1px solid #eaeaea;
+}
+
+.field-group {
+  background-color: #fbfbfb;
+  border-bottom: 1px solid #eaeaea;
+}
+
+.field-group__active {
+  background-color: #ffffff;
+
+  .field-group--name {
+    color: black;
+  }
+}
+
+.field-group--name {
+  color: teal;
+  padding: 5px;
+  cursor: pointer;
+}
+
+.field--name {
+  padding: 5px;
+  margin-bottom: 2px;
+  color: gray;
+  border-left: 3px solid gray;
+  cursor: pointer;
+}
+
+.field--name__active {
+  color: purple;
+  border-left-color: purple;
 }

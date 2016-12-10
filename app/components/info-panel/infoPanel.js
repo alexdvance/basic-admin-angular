@@ -1,7 +1,8 @@
 'use strict';
 
-function InfoPanelCtrl() {
-  console.log(' infopanel baby')
+function InfoPanelCtrl(DataModel) {
+  this.getActiveFieldGroup = DataModel.getActiveFieldGroup;
+  this.getActiveField = DataModel.getActiveField;
 }
 
 angular.module('ba.infoPanel', [])

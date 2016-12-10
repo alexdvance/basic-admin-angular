@@ -12,7 +12,11 @@ angular.module('basicAdmin')
     }
 
     function setActiveFieldGroup(item) {
-        activeFieldGroup = item;
+        if (typeof item === 'string') {
+            activeFieldGroup = { name: item };
+        } else {
+            activeFieldGroup = item;
+        }
     }
 
     function getActiveFieldGroup() {
@@ -21,6 +25,7 @@ angular.module('basicAdmin')
 
     function setActiveField(item) {
         activeField = item;
+        console.log(' infopanel baby', activeField)
     }
 
     function getActiveField() {

@@ -1,3 +1,27 @@
-<div>
-  {{ $ctrl.info }}
+<div class="info-panel--header"
+     ng-bind="$ctrl.getActiveFieldGroup().name"></div>
+
+<div class="info-panel--container">
+  <div ng-bind="$ctrl.getActiveField().name"
+       class="info-panel--field-name"></div>
+
+  <table class="info-panel--table">
+    <tr>
+      <td>
+        Type
+      </td>
+      <td>
+        <div ng-bind="$ctrl.getActiveField().data_type"></div>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        Usage
+      </td>
+      <td>
+        <span ng-repeat="usage in $ctrl.getActiveField().app_keys"
+             ng-bind="usage + ' '"></span>
+      </td>
+    </tr>
+  </table>
 </div>
