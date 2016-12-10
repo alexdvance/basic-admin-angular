@@ -1,8 +1,11 @@
 'use strict';
 
-function NavigatorCtrl(DataFilters) {
+function NavigatorCtrl(DataModel, DataFilters) {
   this.singleProp = DataFilters.singleProp;
   this.multiProp = DataFilters.multiProp;
+
+  this.setActiveFieldGroup = DataModel.setActiveFieldGroup;
+  this.getActiveFieldGroup = DataModel.getActiveFieldGroup;
 }
 
 angular.module('ba.navigator', [])

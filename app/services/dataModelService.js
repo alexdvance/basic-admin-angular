@@ -11,22 +11,33 @@ angular.module('basicAdmin')
         return dataItems;
     }
 
-    function setActiveItem(item) {
-        activeItem = item;
+    function setActiveFieldGroup(item) {
+        activeFieldGroup = item;
     }
 
-    function getActiveItem() {
-        return activeItem;
+    function getActiveFieldGroup() {
+        return activeFieldGroup;
+    }
+
+    function setActiveField(item) {
+        activeField = item;
+    }
+
+    function getActiveField() {
+        return activeField;
     }
 
     var dataItems = [];
-    var activeItem = {};
+    var activeFieldGroup = {};
+    var activeField = {};
 
     return {
         setDataItems: setDataItems,
         getDataItems: getDataItems,
-        setActiveItem: setActiveItem,
-        getActiveItem: getActiveItem,
+        setActiveFieldGroup: setActiveFieldGroup,
+        getActiveFieldGroup: getActiveFieldGroup,
+        setActiveField: setActiveField,
+        getActiveField: getActiveField,
     };
 }])
 

@@ -1,9 +1,25 @@
-<div>General Info</div>
-<div ng-repeat="item in $ctrl.items | filter: $ctrl.singleProp">
-  {{ item.name }}
-</div>
+<div>Field Groups</div>
+<div class="field-groups">
+  <div class="field-group">
+    <div class="field-group--name"
+         ng-click="$ctrl.setActiveFieldGroup('general')">general info</div>
+    <div ng-show="$ctrl.getActiveFieldGroup() === 'general'">
+      <div ng-repeat="field in $ctrl.items | filter: $ctrl.singleProp">
+        {{ field.name }}
+      </div>
+    </div>
+  </div>
 
-<div>Complicated shit</div>
-<div ng-repeat="item in $ctrl.items | filter: $ctrl.multiProp">
-  {{ item.name }}
+  <div ng-repeat="fieldGroup in $ctrl.items | filter: $ctrl.multiProp"
+       class="field-group">
+    <div class="field-group--name"
+         ng-bind="fieldGroup.name"
+         ng-click="$ctrl.setActiveFieldGroup(fieldGroup)"></div>
+
+    <div ng-show="$ctrl.getActiveFieldGroup().name === fieldGroup.name">
+      <div ng-repeat="field in fieldGroup.containing_object.properties">
+        {{ field.name }}
+      </div>
+    </div>
+  </div>
 </div>
