@@ -1,24 +1,33 @@
-<div>Field Groups</div>
+<div class="navigator--header">Field Groups</div>
 <div class="field-groups">
-  <div class="field-group">
+  <div class="field-group"
+       ng-class="{ 'field-group__active': $ctrl.getActiveFieldGroup() === 'general' }">
     <div class="field-group--name"
-         ng-click="$ctrl.setActiveFieldGroup('general')">general info</div>
+         ng-click="$ctrl.setActiveFieldGroup('general')">
+         general info</div>
     <div ng-show="$ctrl.getActiveFieldGroup() === 'general'">
-      <div ng-repeat="field in $ctrl.items | filter: $ctrl.singleProp">
-        {{ field.name }}
+      <div ng-repeat="field in $ctrl.items | filter: $ctrl.singleProp"
+           ng-bind="field.name"
+           class="field--name"
+           ng-class="{ 'field--name__active': $ctrl.getActiveField().name === field.name }"
+           ng-click="$ctrl.setActiveField(field)">
       </div>
     </div>
   </div>
 
   <div ng-repeat="fieldGroup in $ctrl.items | filter: $ctrl.multiProp"
-       class="field-group">
+       class="field-group"
+       ng-class="{ 'field-group__active': $ctrl.getActiveFieldGroup().name === fieldGroup.name }">
     <div class="field-group--name"
          ng-bind="fieldGroup.name"
          ng-click="$ctrl.setActiveFieldGroup(fieldGroup)"></div>
 
     <div ng-show="$ctrl.getActiveFieldGroup().name === fieldGroup.name">
-      <div ng-repeat="field in fieldGroup.containing_object.properties">
-        {{ field.name }}
+      <div ng-repeat="field in fieldGroup.containing_object.properties"
+           ng-bind="field.name"
+           class="field--name"
+           ng-class="{ 'field--name__active': $ctrl.getActiveField().name === field.name }"
+           ng-click="$ctrl.setActiveField(field)">
       </div>
     </div>
   </div>

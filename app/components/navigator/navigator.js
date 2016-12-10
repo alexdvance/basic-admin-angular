@@ -6,6 +6,8 @@ function NavigatorCtrl(DataModel, DataFilters) {
 
   this.setActiveFieldGroup = DataModel.setActiveFieldGroup;
   this.getActiveFieldGroup = DataModel.getActiveFieldGroup;
+  this.setActiveField = DataModel.setActiveField;
+  this.getActiveField = DataModel.getActiveField;
 }
 
 angular.module('ba.navigator', [])
