@@ -11,7 +11,7 @@ angular.module('ba.infoPanel', [])
   templateUrl: '/components/info-panel/infoPanel.html',
   controller: InfoPanelCtrl,
   bindings: {
-    info: '='
+    field: '='
   }
 })
 

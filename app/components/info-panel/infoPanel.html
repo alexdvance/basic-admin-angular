@@ -1,25 +1,22 @@
-<div class="info-panel--header"
-     ng-bind="$ctrl.getActiveFieldGroup().name"></div>
-
-<div class="info-panel--container">
-  <div ng-bind="$ctrl.getActiveField().name"
+<div class="info-panel--container" ng-id="$ctrl.field.name">
+  <div ng-bind="$ctrl.field.name"
        class="info-panel--field-name"></div>
 
-  <table class="info-panel--table">
-    <tr>
-      <td>
+  <table class="info-table">
+    <tr class="info-table--tr">
+      <td class="info-table--td-label">
         Type
       </td>
       <td>
-        <div ng-bind="$ctrl.getActiveField().data_type"></div>
+        <div ng-bind="$ctrl.field.data_type"></div>
       </td>
     </tr>
-    <tr>
-      <td>
+    <tr class="info-table--tr">
+      <td class="info-table--td-label">
         Usage
       </td>
       <td>
-        <span ng-repeat="usage in $ctrl.getActiveField().app_keys"
+        <span ng-repeat="usage in $ctrl.field.app_keys"
              ng-bind="usage + ' '"></span>
       </td>
     </tr>
