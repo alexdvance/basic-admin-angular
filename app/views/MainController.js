@@ -8,7 +8,8 @@ angular.module('basicAdmin')
   'DataAPI',
   function($scope, DataModel, DataAPI){
     DataAPI.getData().then(function(response) {
-      DataModel.setDataItems(response.data);
+      var processedData = DataModel.processData(response.data);
+      DataModel.setDataItems(processedData);
 
       $scope.items = DataModel.getDataItems();
     });
