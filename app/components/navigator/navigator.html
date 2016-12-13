@@ -1,21 +1,7 @@
 <div class="navigator--header">Field Groups</div>
-<div class="field-groups">
-  <div class="field-group"
-       ng-class="{ 'field-group__active': $ctrl.getActiveFieldGroup() === 'general' }">
-    <div class="field-group--name"
-         ng-click="$ctrl.setActiveFieldGroup('general')">
-         general info</div>
-    <div ng-show="$ctrl.getActiveFieldGroup() === 'general'">
-      <div ng-repeat="field in $ctrl.items | filter: $ctrl.singleProp"
-           ng-bind="field.name"
-           class="field--name"
-           ng-class="{ 'field--name__active': $ctrl.getActiveField().name === field.name }"
-           ng-click="$ctrl.setActiveField(field)">
-      </div>
-    </div>
-  </div>
 
-  <div ng-repeat="fieldGroup in $ctrl.items | filter: $ctrl.multiProp"
+<div class="field-groups">
+  <div ng-repeat="fieldGroup in $ctrl.items"
        class="field-group"
        ng-class="{ 'field-group__active': $ctrl.getActiveFieldGroup().name === fieldGroup.name }">
     <div class="field-group--name"
