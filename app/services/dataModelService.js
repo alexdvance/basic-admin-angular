@@ -41,7 +41,6 @@ angular.module('basicAdmin')
 
         function setActiveField(item) {
             activeField = item;
-            console.log(' infopanel baby', activeField)
         }
 
         function getActiveField() {
