@@ -19,19 +19,22 @@
             <section class="main row">
                 <navigator items="items"
                     class="col col-xs-4 navigator"></navigator>
-                <info-panel class="col col-xs-8 info-panel"></info-panel>
+                <info-section class="col col-xs-8 info-section"
+                     id="info-section"></info-section>
                 <div ui-view autoscroll="false" id="ui-view"></div>
             </section>
 
         </div>
 
         <script src="vendor/angular/angular.js"></script>
+        <script src="vendor/angular-scroll/angular-scroll.js"></script>
         <script src="app.js"></script>
         <script src="services/dataModelService.js"></script>
         <script src="services/dataAPIService.js"></script>
         <script src="services/dataFilterService.js"></script>
         <script src="views/MainController.js"></script>
         <script src="components/navigator/navigator.js"></script>
+        <script src="components/info-section/infoSection.js"></script>
         <script src="components/info-panel/infoPanel.js"></script>
 
     </body>
