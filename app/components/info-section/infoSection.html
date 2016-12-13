@@ -1,5 +1,6 @@
 <div class="info-panel--header"
-     ng-bind="$ctrl.getActiveFieldGroup().name"></div>
+     ng-bind="$ctrl.getActiveFieldGroup().name ||
+              'Select a field group from the menu.'"></div>
 
 <info-panel ng-repeat="field in $ctrl.getActiveFieldGroup().containing_object.properties"
             field="field"></info-panel>
