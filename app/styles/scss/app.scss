@@ -74,6 +74,7 @@ body {
 }
 
 .info-table--td-label {
+  width: 100px;
   background-color: #f2fbff;
   border-right: 1px solid #eee;
 }
@@ -102,6 +103,7 @@ body {
 }
 
 .field--name {
+  display: block;
   padding: 5px;
   margin-bottom: 2px;
   color: gray;
