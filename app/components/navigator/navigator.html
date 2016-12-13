@@ -1,6 +1,6 @@
 <div class="navigator--header">Field Groups</div>
 
-<div class="field-groups">
+<div class="field-groups" id="navigator">
   <div ng-repeat="fieldGroup in $ctrl.items"
        class="field-group"
        ng-class="{ 'field-group__active': $ctrl.getActiveFieldGroup().name === fieldGroup.name }">
@@ -9,12 +9,14 @@
          ng-click="$ctrl.setActiveFieldGroup(fieldGroup)"></div>
 
     <div ng-show="$ctrl.getActiveFieldGroup().name === fieldGroup.name">
-      <div ng-repeat="field in fieldGroup.containing_object.properties"
-           ng-bind="field.name"
-           class="field--name"
-           ng-class="{ 'field--name__active': $ctrl.getActiveField().name === field.name }"
-           ng-click="$ctrl.setActiveField(field)">
-      </div>
+      <a ng-repeat="field in fieldGroup.containing_object.properties"
+         ng-bind="field.name"
+         ng-href="#{{ field.name }}"
+         class="field--name"
+         ng-class="{ 'field--name__active': $ctrl.getActiveField().name === field.name }"
+         ng-click="$ctrl.setActiveField(field);
+                   $ctrl.scrollToTarget(field.name);">
+      </a>
     </div>
   </div>
 </div>
